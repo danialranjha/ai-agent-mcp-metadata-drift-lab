@@ -1,0 +1,18 @@
+{
+  "x_weighted_lengths": [
+    247,
+    262,
+    210,
+    197
+  ],
+  "all_within_280": true,
+  "body_dimensions": [
+    1400,
+    1000
+  ],
+  "header_dimensions": [
+    1500,
+    600
+  ],
+  "visual_review": "Both rendered PNGs inspected; text and causal paths readable."
+}

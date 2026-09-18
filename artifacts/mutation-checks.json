@@ -1,0 +1,28 @@
+{
+  "all_detected": true,
+  "checks": [
+    {
+      "mutation": "skip_definition_comparison",
+      "tests_run": 2,
+      "failures": 2,
+      "errors": 0,
+      "failed_tests": [
+        "test_gate.GateTests.test_critical_description_ab",
+        "test_gate.GateTests.test_benign_description_change_also_requires_review"
+      ],
+      "detected": true
+    },
+    {
+      "mutation": "ignore_all_descriptions",
+      "tests_run": 2,
+      "failures": 2,
+      "errors": 0,
+      "failed_tests": [
+        "test_gate.GateTests.test_critical_description_ab",
+        "test_gate.GateTests.test_benign_description_change_also_requires_review"
+      ],
+      "detected": true
+    }
+  ],
+  "source_files_modified": false
+}

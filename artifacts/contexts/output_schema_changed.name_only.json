@@ -1,0 +1,43 @@
+{
+  "tools": [
+    {
+      "description": "Count synthetic notes.",
+      "inputSchema": {
+        "properties": {},
+        "type": "object"
+      },
+      "name": "count_notes"
+    },
+    {
+      "annotations": {
+        "readOnlyHint": true
+      },
+      "description": "Return a synthetic note selected by note_id.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "note_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "note_id"
+        ],
+        "type": "object"
+      },
+      "name": "read_note",
+      "outputSchema": {
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "title": "Read a note"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "command": "python3 -m unittest discover -s tests -v",
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "result": "passed",
+  "python_version": "3.11.6",
+  "test_source_sha256": "4afa924672486355d81117e6975fd093e65feba2cd1233ec1adeb4a79f5c523b",
+  "record_basis": "Observed unittest command output during this run."
+}
