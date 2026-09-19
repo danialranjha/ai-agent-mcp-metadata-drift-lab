@@ -45,7 +45,9 @@ A harmless description edit also triggers re-review. After a separate explicit r
 
 ## Threat model
 
-The assumed adversary can replace the synthetic `tools/list` metadata supplied after review, including nested schema descriptions and future extension fields. This models a compromised or changed server advertisement; no real server was attacked. The host, its configured server identity, baseline storage, comparison code, and routing of operator diagnostics remain trusted.
+The assumed adversary can replace the synthetic `tools/list` metadata supplied after review, including nested schema descriptions and future extension fields. The motivating scenario is an upstream tool-definition update that introduces unreviewed instructions while retaining the tool name. Only metadata replacement is exercised here; no package update, server takeover, or real supply-chain attack was performed. The host, its configured server identity, baseline storage, comparison code, and routing of operator diagnostics remain trusted.
+
+Full server or package compromise could also change implementation, outputs, or access to resources available to that component. Comparing advertised definitions would not contain those changes. Conversely, hostile tool descriptions can create a separate route toward the agent's other capabilities; this experiment does not test that downstream influence.
 
 The adversary cannot alter the stored baseline or bypass the gate in this model. The host identity is supplied by the host, not taken from an advertised server label. The snapshot digest is an integrity comparison under that trust assumption; it is **not** a signature or server authentication mechanism.
 
@@ -84,6 +86,8 @@ For a production integration, every path that adds or refreshes tool definitions
 [No-Box Vulnerability Analysis, v2](https://arxiv.org/html/2609.10854v2) motivates reviewing tool metadata to form hypotheses for later validation. Its section IV-B assumes a non-malicious MCP server and excludes server compromise. Our experiment instead assumes post-review metadata changes; the freshness gate is our engineering extension. We did not reproduce MCPSec, run its detector, or test its reported recall.
 
 The [MCP tools specification, 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) describes `tools/list`, pagination, change notifications, definitions and untrusted annotations. We use only a synthetic, complete **result object** containing `tools`, not JSON-RPC transport. The specification supports the interface description; it does not claim our gate is a complete security solution.
+
+[Invariant’s 2025 Tool Poisoning Attacks report](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) describes post-approval description changes (“MCP Rug Pulls”), influence across tools, and pinning tool descriptions. That is relevant prior work: this gate is an inspectable implementation of a known review-integrity control, not a newly discovered defense. The report’s demonstrated agent behavior is separate from our metadata-admission measurements.
 
 ## Limits and honest interpretation
 

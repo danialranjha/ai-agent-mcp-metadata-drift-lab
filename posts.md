@@ -6,7 +6,7 @@ These are drafts. No social posts have been published.
 
 You’re building an AI agent that uses an MCP server. You review its tools and approve them.
 
-Now assume the server is compromised. It changes a tool’s description but keeps the name.
+Now imagine an upstream update adds instructions to a tool’s description but keeps its name. You haven’t reviewed that new description.
 
 Would your agent still accept it under the old approval?
 
@@ -29,7 +29,7 @@ My lesson for building AI agents: tie approval to the tool definition you review
 
 You’re building an AI agent that relies on an MCP server. You review the tools it offers and approve them.
 
-Now assume that server is compromised. It changes the description of one tool, but keeps its name. Would your agent keep accepting that tool under the old approval?
+Now imagine an upstream update adds instructions to one tool’s description while keeping its name. You haven’t reviewed that new description. Would your agent keep accepting it under the old approval?
 
 I built a small local experiment to test that question. I used a synthetic tool called read_note. After creating an approved version, I changed its description to ask the agent to repeat a harmless canary string.
 
@@ -53,6 +53,7 @@ My lesson for building AI agents is that approval needs to stay tied to what you
 | Claim or asset | Inspectable evidence |
 |---|---|
 | Research motivation; this gate is our extension | [No-Box paper, v2](https://arxiv.org/html/2609.10854v2), especially IV-B; [README source distinction](README.md#source-claims-versus-this-experiment) |
+| Post-approval tool-description changes and cross-tool risk; background, not results from this experiment | [Invariant: Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks), “MCP Rug Pulls” and “Shadowing Tool Descriptions” |
 | MCP definitions, change notifications, untrusted annotations | [MCP tools specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) |
 | Control admits changed description | [Captured control input](artifacts/contexts/description_instruction.name_only.json) |
 | Snapshot gate withholds changed description | [Captured intervention input](artifacts/contexts/description_instruction.snapshot.json) |
