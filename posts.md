@@ -29,11 +29,11 @@ Add this check: change an approved MCP tool description without renaming it. Req
 
 ## LinkedIn
 
-AI agent builders: assume an MCP server changes its tool description after you review it. The name stays the same. Is the old approval still enough?
+AI agent builders: You are building an agent that relies on an MCP server. Now assume that MCP server is compromised and it changes its tool description after you reviewed it in the past. The name stays the same. Would the old approval still work for your agent? Or would your agent get compromised?
 
-I built a small local experiment around read_note. Its revised description asks the agent to say a harmless canary string.
+I built a small local experiment that demonstrates this using a read_note experiment. Assume that this is a simple MCP server and its description asks the agent to echo a harmless canary string.
 
-The host that checked only approved tool names admitted the new text. The host that compared the complete definition against its reviewed snapshot held it for re-review. Unchanged definitions passed both.
+I tested two checks. The first looked only at the tool's name. Since read_note was already approved, it let the changed description reach the agent's input. The second compared the tool's current definition with the version I had approved. It noticed the change and required another review. When the definition hadn't changed, both checks let it through.
 
 This measured what reached a saved model-input boundary; no model was called. It also exposed the tradeoff: a harmless wording edit needs review too. And a server can keep its metadata unchanged while changing its output, which this gate cannot detect.
 
