@@ -26,12 +26,12 @@ Unchanged definitions passed both checks. No model was called; I measured which 
 
 ### 4/4
 
-Harmless edits need review too. This check cannot catch changed outputs behind an unchanged definition.
+Harmless edits need review too. Tool outputs need a separate check.
 
-Code and walkthrough:
+Code:
 https://github.com/danialranjha/ai-agent-mcp-metadata-drift-lab#technical-walkthrough
 
-Try it: change an approved tool’s description. Require re-review before the new text reaches your agent.
+My lesson for building AI agents: tie approval to the tool definition you reviewed. When it changes, require another review before it reaches your agent.
 
 ## LinkedIn
 
@@ -54,7 +54,7 @@ There’s a tradeoff: even a harmless wording edit needs review. And a server ca
 Code, saved inputs and the walkthrough:
 https://github.com/danialranjha/ai-agent-mcp-metadata-drift-lab#technical-walkthrough
 
-Try this with your own agent: change an approved tool’s description without changing its name. Require another review before the new definition reaches the agent’s input.
+My lesson for building AI agents is that approval needs to stay tied to what you actually reviewed. Save the approved tool definition and compare it whenever you load or refresh the tool. If it has changed, require another review before the new definition reaches your agent.
 
 ## Compact evidence map
 

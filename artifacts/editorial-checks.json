@@ -3,7 +3,7 @@
     240,
     238,
     243,
-    256
+    253
   ],
   "all_within_280": true,
   "body_dimensions": [
@@ -15,6 +15,7 @@
     600
   ],
   "visual_review": "Both rendered PNGs inspected; text and causal paths readable.",
-  "linkedin_word_count": 225,
-  "style": "Conversational builder-to-builder scenario, explicit assumed compromise, chronological explanation, clear cause and effect."
+  "linkedin_word_count": 246,
+  "style": "Conversational builder-to-builder scenario, explicit assumed compromise, chronological explanation, clear cause and effect.",
+  "closing_lesson": "Tie approval to the reviewed tool definition; compare on load or refresh and re-review changes before model input."
 }
