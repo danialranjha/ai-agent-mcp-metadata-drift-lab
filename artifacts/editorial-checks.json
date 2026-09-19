@@ -1,9 +1,9 @@
 {
   "x_weighted_lengths": [
-    247,
-    262,
-    210,
-    197
+    240,
+    238,
+    243,
+    256
   ],
   "all_within_280": true,
   "body_dimensions": [
@@ -14,5 +14,7 @@
     1500,
     600
   ],
-  "visual_review": "Both rendered PNGs inspected; text and causal paths readable."
+  "visual_review": "Both rendered PNGs inspected; text and causal paths readable.",
+  "linkedin_word_count": 225,
+  "style": "Conversational builder-to-builder scenario, explicit assumed compromise, chronological explanation, clear cause and effect."
 }
