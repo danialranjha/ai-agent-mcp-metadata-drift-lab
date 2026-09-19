@@ -2,9 +2,7 @@
 
 These are drafts. No social posts have been published.
 
-## X thread
-
-### 1/4
+## X post
 
 You’re building an AI agent that uses an MCP server. You review its tools and approve them.
 
@@ -12,19 +10,13 @@ Now assume the server is compromised. It changes a tool’s description but keep
 
 Would your agent still accept it under the old approval?
 
-### 2/4
-
 I tested this with a synthetic read_note tool. I changed its description to ask for a harmless canary string.
 
 The first check looked only at the approved name. It still saw read_note, so it let the new description into the agent’s input.
 
-### 3/4
-
 The second check compared the full tool definition with the version I had approved. It noticed the change and required another review.
 
 Unchanged definitions passed both checks. No model was called; I measured which text would reach its input.
-
-### 4/4
 
 Harmless edits need review too. Tool outputs need a separate check.
 
@@ -68,4 +60,4 @@ My lesson for building AI agents is that approval needs to stay tied to what you
 | Code and exact reproduction commands | [Technical walkthrough](README.md#technical-walkthrough) |
 | Social visuals | [Body PNG](visuals/body.png) / [SVG](visuals/body.svg); [5:2 header PNG](visuals/header.png) / [SVG](visuals/header.svg) |
 
-Attach the body image to X post 2; use the header or body for LinkedIn. The private daily source-document link is retained only in the local delivery's evidence map.
+Attach the body image to the X post; use the header or body for LinkedIn. The private daily source-document link is retained only in the local delivery's evidence map.

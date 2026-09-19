@@ -1,11 +1,4 @@
 {
-  "x_weighted_lengths": [
-    240,
-    238,
-    243,
-    253
-  ],
-  "all_within_280": true,
   "body_dimensions": [
     1400,
     1000
@@ -17,5 +10,9 @@
   "visual_review": "Both rendered PNGs inspected; text and causal paths readable.",
   "linkedin_word_count": 246,
   "style": "Conversational builder-to-builder scenario, explicit assumed compromise, chronological explanation, clear cause and effect.",
-  "closing_lesson": "Tie approval to the reviewed tool definition; compare on load or refresh and re-review changes before model input."
+  "closing_lesson": "Tie approval to the reviewed tool definition; compare on load or refresh and re-review changes before model input.",
+  "x_format": "Unnumbered long-form post with natural paragraphs",
+  "x_word_count": 161,
+  "x_numbering_present": false,
+  "x_280_character_splitting_applied": false
 }
